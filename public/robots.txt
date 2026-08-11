@@ -1,4 +1,28 @@
+# Welcome to Bellarix Robots.txt!
+# We allow all search engines to crawl our beautiful site.
+
 User-agent: *
 Allow: /
+Allow: /*#*
+Allow: /#home
+Allow: /#why-us
+Allow: /#services
+Allow: /#projects
+Allow: /#testimonials
+Allow: /#contact
 
+# Block some unnecessary crawler bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap Location
 Sitemap: https://bellarix.in/sitemap.xml
