@@ -27,7 +27,7 @@ html {
   scroll-padding-top: 80px;
 }
 
-body {
+html, body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bx-white);
   color: var(--bx-black);

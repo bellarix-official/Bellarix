@@ -1,6 +1,7 @@
 .hero-section {
   min-height: 100vh;
   background: var(--bx-bg);
+  padding-top: 15px; /* Prevent overlap with fixed navbar, especially on mobile */
 }
 
 .text-silver {
@@ -79,6 +80,17 @@
 .code-editor-bg ::selection {
   background-color: rgba(255, 255, 255, 0.25);
   color: #ffffff;
+}
+
+.mockup-ratio {
+  min-height: 420px; /* Ensures content fits on mobile */
+}
+
+@media (min-width: 768px) {
+  .mockup-ratio {
+    aspect-ratio: 4/3;
+    min-height: auto;
+  }
 }
 
 /* Animations */
