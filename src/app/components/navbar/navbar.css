@@ -1,0 +1,40 @@
+.navbar {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-link {
+  color: var(--bx-dark) !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--bx-black) !important;
+}
+
+.nav-link.active {
+  background-color: var(--bx-black);
+  color: var(--bx-white) !important;
+}
+
+/* Custom Hamburger Icon */
+.navbar-toggler i {
+  color: var(--bx-black);
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+}

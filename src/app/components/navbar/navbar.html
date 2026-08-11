@@ -1,0 +1,51 @@
+<div class="fixed-top pt-3 px-3 d-flex justify-content-center z-index-2" style="z-index: 1030;" data-aos="fade-down"
+  data-aos-duration="800">
+  <nav class="navbar navbar-expand-lg navbar-light glass-effect shadow-sm rounded-pill px-4 w-100"
+    style="max-width: 1200px;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Logo1-removebg-preview.png" alt="Bellarix Logo" height="35"
+          class="me-2 d-inline-block align-text-top">
+        <span class="fw-bold fs-5 text-gradient">BELLARIX</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none px-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 py-3 py-lg-0 gap-1 gap-lg-2 text-center">
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 rounded-pill" [class.active]="activeSection === 'home'" href="#home"
+              (click)="scrollTo('home', $event)" data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 rounded-pill" [class.active]="activeSection === 'why-us'" href="#why-us"
+              (click)="scrollTo('why-us', $event)" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Why
+              Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 rounded-pill" [class.active]="activeSection === 'services'"
+              href="#services" (click)="scrollTo('services', $event)" data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 rounded-pill" [class.active]="activeSection === 'projects'"
+              href="#projects" (click)="scrollTo('projects', $event)" data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium px-3 rounded-pill" [class.active]="activeSection === 'testimonials'"
+              href="#testimonials" (click)="scrollTo('testimonials', $event)" data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show">Testimonials</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center justify-content-center pb-3 pb-lg-0">
+          <a href="#contact" (click)="scrollTo('contact', $event)"
+            class="btn btn-bx-primary btn-sm px-4 rounded-pill shadow-sm" data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

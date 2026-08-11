@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Bellarix Theme Colors */
+  --bx-black: #0a0a0a;
+  --bx-dark: #1f1f1f;
+  --bx-silver: #a9a9a9;
+  --bx-silver-light: #e0e0e0;
+  --bx-white: #ffffff;
+  --bx-white-off: #f8f9fa;
+  
+  --bx-accent: var(--bx-silver);
+  --bx-accent-dark: #808080;
+  
+  --bs-font-sans-serif: 'Outfit', sans-serif;
+  --bs-body-font-family: 'Outfit', sans-serif;
+  --bs-body-bg: var(--bx-white);
+  --bs-body-color: var(--bx-black);
+  
+  --bs-primary: var(--bx-black);
+  --bs-secondary: var(--bx-silver);
+  --bs-dark: var(--bx-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bx-white);
+  color: var(--bx-black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Footer Links */
+.footer-link {
+  color: var(--bx-silver-light);
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: var(--bx-white);
+}
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bx-white-off);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bx-silver);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bx-accent-dark);
+}
+
+/* Premium UI Utilities */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.bg-light-gray {
+  background-color: var(--bx-white-off);
+}
+
+.text-silver {
+  color: var(--bx-silver);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--bx-black) 0%, var(--bx-silver) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-bx-primary {
+  background-color: var(--bx-black);
+  color: var(--bx-white);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 2px solid var(--bx-black);
+  transition: all 0.3s ease;
+}
+
+.btn-bx-primary:hover {
+  background-color: transparent;
+  color: var(--bx-black);
+}
+
+.btn-bx-outline {
+  background-color: transparent;
+  color: var(--bx-black);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 2px solid var(--bx-black);
+  transition: all 0.3s ease;
+}
+
+.btn-bx-outline:hover {
+  background-color: var(--bx-black);
+  color: var(--bx-white);
+}
+
+/* Card hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
