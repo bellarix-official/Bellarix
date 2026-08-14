@@ -1,4 +1,5 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, AfterViewInit, signal, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import * as AOS from 'aos';
@@ -9,28 +10,28 @@ import * as AOS from 'aos';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit {
-  protected readonly title = signal('Bellarix - Premium AI, Web & App Development');
+export class App implements AfterViewInit {
+  protected readonly title = signal('Bellarix | Premium IT Solutions, AI Automation & Web Development');
 
-  constructor(private titleService: Title, private metaService: Meta) {
-    // Dynamically setting SEO (though statically set in index.html for crawlers, 
-    // this ensures Angular apps update it upon route changes in the future).
+  constructor(
+    private titleService: Title, 
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.titleService.setTitle(this.title());
-    this.metaService.addTags([
-      { name: 'description', content: 'Bellarix builds stunning, responsive, and performance-driven digital experiences. We specialize in AI automation, Web development, and App development.' },
-      { name: 'keywords', content: 'Bellarix, AI automation, Web Development, App Development, IT Agency Pune, Tech Startup' },
-      { name: 'author', content: 'Bellarix' },
-      { property: 'og:title', content: this.title() },
-      { property: 'og:description', content: 'We build cutting-edge digital experiences, empowering businesses with stunning, responsive, and performance-driven solutions.' }
-    ]);
   }
 
-  ngOnInit() {
-    AOS.init({
-      once: true,
-      offset: 50,
-      duration: 800,
-      easing: 'ease-in-out',
-    });
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        AOS.init({
+          once: true,
+          offset: 50,
+          duration: 800,
+          easing: 'ease-in-out',
+        });
+        AOS.refresh();
+      }, 100);
+    }
   }
 }
